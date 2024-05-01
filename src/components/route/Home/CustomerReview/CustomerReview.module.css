@@ -1,0 +1,288 @@
+.outerContainer {
+  /* padding: 2rem 0; */
+  width: 100%;
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid pink; */
+  box-sizing: border-box;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  .headingContainer {
+    margin-top: 40px;
+    z-index: 2;
+    width: 90%;
+    /* box-sizing: border-box; */
+    /* border: 2px solid greenyellow; */
+    margin-bottom: 2rem;
+    >h1 {
+      color: white;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 700;
+      font-size: 4rem;
+      font-style: "";
+    }
+  }
+  .reviewSlider {
+    width: 80%;
+    padding: 1rem;
+    /* height: 20rem; */
+    /* border: 2px solid pink; */
+    margin-bottom: 2rem;
+    /* box-sizing: border-box; */
+
+    .reviewCard {
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      width: 60%;
+      /* height: 20rem; */
+      border: 2px solid rgb(102, 102, 102);
+      border-radius: 20px;
+      align-items: center;
+      min-height: 25rem;
+      margin-top: 30px;
+      background-color: rgba(20, 19, 19, 0.788);
+      transition: transform 300ms ease-in-out, background-color 300ms ease-in-out;
+
+      &:hover{
+        transform: scale(1.1);
+        border: 2px solid white;
+        box-shadow: 2px 2px 10px 1px gray;
+      background-color: rgba(80, 80, 80, 0.575);
+        z-index: 2;
+      }
+      /* margin: 2rem 3rem; */
+      .imageBox {
+        /* border: 2px solid pink; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 8rem;
+        width: 8rem;
+        margin: 1rem 0;
+        margin-bottom: 0.5rem;
+        .profileImg {
+          height: 8rem;
+          width: 8rem;
+          object-fit: contain;
+          border-radius: 50%;
+        }
+      }
+      .infoBox {
+        /* border: 2px solid gray; */
+        margin: 1rem 1rem;
+        padding: 0 0.5rem;
+        .username {
+          text-align: center;
+          font-size: 1.8rem;
+          font-family: "Roboto Slab";
+          margin-bottom: 2px;
+        }
+        .date {
+          text-align: center;
+          color: rgb(202, 202, 202);
+          margin-bottom: 6px;
+        }
+        .review {
+          font-family: "Roboto Slab";
+          font-weight: 300;
+          letter-spacing: 0.5px;
+          word-spacing: 1.2px;
+          line-height: 1.5rem;
+          box-sizing: border-box;
+          /* border: 2px solid pink; */
+          width: 95%;
+          margin: 8px auto;
+          font-size: 18px;
+        }
+      }
+    }
+   
+    
+  }
+  
+}
+
+.outerContainer::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  /* min-height: 70vh; */
+  height: 100%;
+  backdrop-filter: brightness(15%) blur(1px);
+  /* filter: brightness(10%); */
+}
+
+.swiper-pagination {
+  bottom: 10px; /* Adjust as needed */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.mySwiper {
+  /* border: 2px solid gray; */
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box;
+}
+
+.paginationBullet {
+  color: rgb(255, 255, 255); /* Change color of pagination dots to red */
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 600px) {
+  .outerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid pink; */
+    box-sizing: border-box;
+    align-items: center;
+  
+    .headingContainer {
+      width: 100%;
+      /* box-sizing: border-box; */
+      /* border: 2px solid greenyellow; */
+      margin-bottom: 1rem;
+      h1 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+    .reviewSlider {
+      width: 70%;
+      padding: 8px;
+      /* height: 20rem; */
+      /* border: 2px solid pink; */
+      margin-bottom: 0;
+      /* box-sizing: border-box; */
+  
+      .reviewCard {
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border: 2px solid rgb(102, 102, 102);
+        align-items: center;
+        height: 10rem;
+
+        .imageBox {
+          /* border: 2px solid pink; */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 8rem;
+          width: 8rem;
+          margin: 12px 0;
+          margin-bottom: 14px;
+          .profileImg {
+            height: 8rem;
+            width: 8rem;
+            object-fit: contain;
+            border-radius: 50%;
+          }
+        }
+        .infoBox {
+          /* border: 2px solid gray; */
+          margin: 10px 12px;
+          padding: 0;
+          .username {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: "Roboto Slab";
+            margin-bottom: 2px;
+          }
+          .date {
+            text-align: center;
+            color: rgb(202, 202, 202);
+            margin-bottom: 6px;
+          }
+          .review {
+            font-family: "Roboto Slab";
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            word-spacing: 1.1px;
+            line-height: 1.5rem;
+            box-sizing: border-box;
+            /* border: 2px solid pink; */
+            width: 100%;
+            margin: 14px auto;
+            font-size: 15px;
+            max-height: 7rem;
+            overflow-y: auto;
+          }
+        }
+      }
+    }
+  }
+  
+}
+/* .outerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid green;
+
+  .headingContainer {
+    width: 100%;
+    border: 2px solid pink;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    h1 {
+      padding: 1rem 2vw;
+    }
+  }
+  .sliderContainer {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    border: 2px solid palevioletred;
+    width: 90%;
+    overflow-x: auto;
+    height: 35rem;
+
+    .customerCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 1rem;
+
+      width: 25rem;
+      height: 30rem;
+      flex-shrink: 0;
+      margin: 0 2rem;
+      border: 2px solid ghostwhite;
+
+      .profileBox {
+
+        width: 12rem;
+        height: 12rem;
+
+
+        > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          flex-shrink: 0;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+} */

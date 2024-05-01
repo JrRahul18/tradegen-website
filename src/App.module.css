@@ -1,0 +1,36 @@
+:root{
+  --background-colour-1: #223c63;
+  --background-colour-2: #182a44;
+}
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Roboto";
+  box-sizing: border-box;
+  /* background: rgb(14, 14, 48); */
+  background: rgb(1, 1, 31);
+  background-color: #002130;
+  background-color: #223c63;
+  h1{
+    background: linear-gradient(
+      360deg,
+      rgb(87, 87, 87) 2%,
+      rgb(238, 238, 238) 60%
+    );
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  color: white;
+  /* background: linear-gradient(to bottom, red, ); */
+  /* background-image: linear-gradient(to bottom, rgb(41, 20, 20), rgb(58, 58, 121)); */
+  /* background: linear-gradient(red, yellow, blue); */
+  
+
+
+}

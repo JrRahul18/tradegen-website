@@ -1,0 +1,16 @@
+.outerBox{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    >div{
+        margin-top: 3rem;
+    }
+}
+input, button{
+    padding: 10px 10px;
+}
+button{
+    cursor: pointer;
+}

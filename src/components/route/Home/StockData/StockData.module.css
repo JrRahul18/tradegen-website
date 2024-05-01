@@ -1,0 +1,167 @@
+.outerBox {
+  position: relative;
+  margin: 1rem 0;
+  /* padding: 2rem 0; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 95vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* border: 2px solid lightgray; */
+  box-sizing: border-box;
+
+  .headingBox {
+    z-index: 1;
+    /* width: 90%; */
+    /* border: 2px solid lightgray; */
+    text-align: center;
+    margin: 1rem 0;
+
+    h1 {
+      font-size: 4rem;
+      margin: 1rem 0;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 2rem 0;
+
+    }
+  }
+  .dataContainer {
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    overflow-x: auto;
+    border: 2px solid gray;
+
+    .dataBox {
+      display: flex;
+      width: 100%;
+      
+      > div {
+
+        min-height: 4rem;
+        /* width: 8pc; */
+        width: 8rem;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* flex: 2; */
+        
+        border: 2px solid transparent;
+        border-bottom: 0.5rem double rgb(48, 48, 48);
+        border-left:  0.5rem  double rgb(48, 48, 48);
+        padding: 0.5rem 1rem;
+        >p{
+          font-size: 14px;
+          color: rgb(122, 122, 122);
+        }
+        >span{
+          font-size: 18px;
+        }
+      }
+      >.companyName{
+        width: 18rem;
+        border-left: none;
+        /* width: 20pc; */
+
+      }
+    }
+    hr{
+      width:100%;
+    }
+  }
+}
+
+.outerBox::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 95vh;
+  
+
+  backdrop-filter: brightness(70%) blur(4px);
+  /* backdrop-filter: blur(20px); */
+}
+
+/* .outerBox {
+    padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid whitesmoke;
+  align-items: center;
+  .headingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    h1 {
+      font-size: 4rem;
+     
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+  }
+  .dataContainer {
+    width: 95%;
+    box-sizing: border-box;
+    border: 2px solid rgba(119, 119, 119, 0.637);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+
+    .dataBox {
+      border: 2px solid gainsboro;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0rem 1vw;
+      margin: 0.7rem 0;
+      overflow-x: auto;
+      
+
+      .companyName{
+
+        flex: 2;
+      }
+      >div{
+        box-sizing: border-box;
+        margin: 0 0.5vw;
+        padding: 1.3rem 0;
+        width: 8.5%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid darkgray;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        >p{
+            font-size: 13px;
+        }
+      }
+    }
+  }
+} */

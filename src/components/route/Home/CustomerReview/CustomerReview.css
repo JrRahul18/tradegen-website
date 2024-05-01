@@ -1,0 +1,17 @@
+/* .mySwiper{
+
+    background-color: rgb(36, 68, 95);
+    height: 50rem;
+}
+.slide{
+    border: 2px solid pink;
+    background-color: blue;
+} */
+.swiper-pagination-bullet{
+    background-color: rgb(255, 255, 255) !important;
+    
+}
+.swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+}
+

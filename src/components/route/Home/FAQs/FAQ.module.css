@@ -1,0 +1,115 @@
+.outerBox {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 80vh; */
+  /* border: 2px solid white; */
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  margin: 4rem 0;
+
+  .headingContainer {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid palegoldenrod; */
+    box-sizing: border-box;
+    width: 60%;
+    margin: 20px 0;
+    align-items: center;
+    h1 {
+      letter-spacing: 2px;
+      text-align: center;
+      font-size: 70px;
+      font-family: "Roboto";
+      font-weight: 400;
+
+    }
+  }
+
+  .faqContainer {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid skyblue; */
+    width: 60%;
+    margin-bottom: 20px;
+
+    .itemContainer {
+
+      background: #0f323e;
+      background: linear-gradient(0deg, #0f323e, #0f1725);
+
+      letter-spacing: 0.3px;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid rgb(77, 77, 77);
+      border-radius: 20px;
+      margin: 15px 10px;
+      padding: 10px 2vw;
+      transition: box-shadow 300ms ease-in-out;
+      &:hover {
+        box-shadow: 10px 10px 20px 3px rgba(136, 136, 136, 0.2);
+      }
+
+      .questionBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 2px solid white; */
+        /* margin-bottom: 10px; */
+        padding: 12px 1vw;
+        padding-right: 2vw;
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: rgb(184, 184, 184);
+      }
+      .answerBox {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid whitesmoke; */
+        transition: ease-in 200ms;
+        overflow: hidden;
+        transition: min-height 300ms ease-in-out;
+        height: 0;
+        min-height: 0;
+        font-size: 1.1rem;
+        
+
+      }
+      .answerBox.active {
+        padding: 5px 1vw;
+        min-height: 120px;
+        /* overflow: auto; */
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .outerBox{
+    .headingContainer{
+      width: 90%;
+      h1{
+        font-size: 2rem;
+        letter-spacing: 2px;
+      }
+    }
+    .faqContainer{
+      width: 90%;
+      .itemContainer{
+        margin: 10px 10px;
+        padding: 0px 2vw;
+        .questionBox{
+          font-size: 16px;
+        }
+        .answerBox{
+          font-size: 16px;
+        }
+        .answerBox.active{
+          min-height: 100px;
+          overflow: auto;
+        }
+      }
+    }
+  }
+}
